@@ -1,7 +1,7 @@
 package logcli
 
 import (
-	"common/constant"
+	"github.com/zm50/common/constant"
 
 	"k8s.io/klog/v2"
 )
