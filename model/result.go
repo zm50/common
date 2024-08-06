@@ -20,9 +20,9 @@ func NewMetadata(code int, message string) Metadata {
 
 // metadata
 var (
-	success       = NewMetadata(0, "success")
-	internalError = NewMetadata(200000, "Internal Server Error")
-	paramError    = NewMetadata(200001, "Invalid Parameters")
+	success       = NewMetadata(0, "OK")
+	internalError = NewMetadata(100000, "Internal Server Error")
+	paramError    = NewMetadata(100001, "Invalid Parameters")
 )
 
 // 通用万能返回值
