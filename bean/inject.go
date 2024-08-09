@@ -23,3 +23,11 @@ func DeepInject(provider BeanProvider, name string) error {
 func Autowise[T any](obj *T, name string) error {
 	return instance.Autowise(obj, name)
 }
+
+// 对外暴露自动装配对象的能力，name为空字符串时表示默认使用类型自动装配
+func AutowiseObj[T any](name string) (*T, error) {
+	obj := new(T)
+	err := instance.Autowise(obj, name)
+
+	return obj, err
+}
