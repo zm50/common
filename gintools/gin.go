@@ -31,7 +31,7 @@ func ArgIntoWithValid[T any](fn GinParamHandler[T], vailds ...func(c *gin.Contex
 		for _, vaild := range vailds {
 			res := vaild(c, arg)
 			if res != nil {
-				logcli.Error("failed to valid param: %v", res)
+				logcli.Errorf("failed to valid param: %v", res)
 				ParamError(c, res)
 				return
 			}

@@ -6,9 +6,10 @@ import (
 	"github.com/zm50/common/component/logcli"
 )
 
+// Recover is a function that recovers from panic and logs the error and stack trace.
 func Recover() {
 	if err := recover(); err!= nil {
-		logcli.Error("recover panic: %v", err)
-		logcli.Error("stack trace: %s", debug.Stack())
+		logcli.Errorf("recover panic: %v", err)
+		logcli.Errorf("stack trace: %s", debug.Stack())
 	}
 }
